@@ -39,6 +39,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!-- gitflow -->
+        <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
+        <gitflow-maven-plugin.version>1.9.0</gitflow-maven-plugin.version>
         <!-- Docker -->
         <!-- https://mvnrepository.com/artifact/com.spotify/dockerfile-maven-plugin -->
         <dockerfile-maven-plugin.version>1.4.3</dockerfile-maven-plugin.version>
@@ -100,6 +103,27 @@
                     <buildArgs>
                         <JAR_FILE>target/${project.name}.jar</JAR_FILE>
                     </buildArgs>
+                </configuration>
+            </plugin>
+            <!-- Release plugin -->
+            <plugin>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>${gitflow-maven-plugin.version}</version>
+                <configuration>
+                    <gitFlowConfig>
+                        <developmentBranch>development</developmentBranch>
+                    </gitFlowConfig>
+                    <commitMessages>
+                        <featureStartMessage>update versions for feature branch</featureStartMessage>
+                        <featureFinishMessage>update versions for development branch</featureFinishMessage>
+                        <hotfixStartMessage>update versions for hotfix</hotfixStartMessage>
+                        <hotfixFinishMessage>update for next development version</hotfixFinishMessage>
+                        <releaseStartMessage>update versions for release</releaseStartMessage>
+                        <releaseFinishMessage>update for next development version</releaseFinishMessage>
+                        <tagHotfixMessage>tag hotfix</tagHotfixMessage>
+                        <tagReleaseMessage>tag release</tagReleaseMessage>
+                    </commitMessages>
                 </configuration>
             </plugin>
         </plugins>
