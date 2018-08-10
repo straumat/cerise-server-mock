@@ -2,6 +2,9 @@ language: java
 install: true
 addons:
   ssh_known_hosts: 5.196.65.205
+  apt:
+    packages:
+    - sshpass
 cache:
   directories:
   - $HOME/.m2
