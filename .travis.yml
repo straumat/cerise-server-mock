@@ -14,7 +14,7 @@ after_success:
 - RELEASE=`cat pom.xml | grep "^    <version>.*</version>$" | awk -F'[><]' '{print $3}'`
 # Update official "cerise-server-mock" image.
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-- docker push $DOCKER_USERNAME/cerise
+- docker push $DOCKER_USERNAME/cerise-server-mock
 # Run "cerise" image on reference server.
 - sshpass -p $SSH_PASSWORD ssh ci@5.196.65.205 'docker stop $(docker ps -aq --filter "label=cerise")'
 - sshpass -p $SSH_PASSWORD ssh ci@5.196.65.205 'docker rm -f $(docker ps -aq --filter "label=cerise")'
