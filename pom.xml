@@ -7,7 +7,7 @@
     <!-- Project information -->
     <groupId>com.oakinvest.cerise</groupId>
     <artifactId>cerise-server-mock</artifactId>
-    <version>0.5</version>
+    <version>0.6-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>cerise-server-mock</name>
     <description>Mocked BIP-0171 compliant server</description>
