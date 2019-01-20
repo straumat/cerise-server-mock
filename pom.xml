@@ -47,7 +47,7 @@
         <gitflow-maven-plugin.version>1.9.0</gitflow-maven-plugin.version>
         <!-- Docker -->
         <!-- https://mvnrepository.com/artifact/com.spotify/dockerfile-maven-plugin -->
-        <dockerfile-maven-plugin.version>1.4.3</dockerfile-maven-plugin.version>
+        <dockerfile-maven-plugin.version>1.4.10</dockerfile-maven-plugin.version>
         <docker.image.prefix>straumat</docker.image.prefix>
     </properties>
     <!-- =========================================================================================================== -->
